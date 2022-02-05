@@ -7,11 +7,12 @@ const Card = props => {
 
 const styles = StyleSheet.create({
   card: {
+    fontWeight: 'bold',
     width: 300,
     maxWidth: '80%',
     alignItems: 'center',
     // shadowColor: 'black',
-    elevation: 8,
+    elevation: 2,
     padding: 20,
     borderRadius: 10,
   },
