@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, Button, Image, StyleSheet} from 'react-native';
+import colors from '../constant/colors';
 // import img from '../assets/success.png';
 const GameOverScreen = props => {
   return (
@@ -17,9 +18,10 @@ const GameOverScreen = props => {
         />
       </View>
       <Text>
-        Your phone needed <Text> {props.roundsNumber} </Text> rounds to guess
-        the number
-        <Text>{props.userNumber}</Text>
+        Your phone needed{' '}
+        <Text style={styles.highlight}> {props.roundsNumber} </Text> rounds to
+        guess the number
+        <Text style={styles.highlight}>{props.userNumber}</Text>
       </Text>
       <Button title="New Game" onPress={props.onRestart} />
     </View>
@@ -44,6 +46,9 @@ const styles = StyleSheet.create({
   imagePic: {
     width: '100%',
     height: '100%',
+  },
+  highlight: {
+    color: colors.primaryColor,
   },
 });
 
