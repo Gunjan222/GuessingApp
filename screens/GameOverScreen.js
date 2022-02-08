@@ -1,6 +1,7 @@
 import React from 'react';
-import {View, Text, Button, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet} from 'react-native';
 import colors from '../constant/colors';
+import MainButton from '../components/MainButton';
 // import img from '../assets/success.png';
 const GameOverScreen = props => {
   return (
@@ -21,9 +22,9 @@ const GameOverScreen = props => {
         Your phone needed{' '}
         <Text style={styles.highlight}> {props.roundsNumber} </Text> rounds to
         guess the number
-        <Text style={styles.highlight}>{props.userNumber}</Text>
+        <Text style={styles.highlight}> {props.userNumber} </Text>
       </Text>
-      <Button title="New Game" onPress={props.onRestart} />
+      <MainButton onPress={props.onRestart}> NEW GAME </MainButton>
     </View>
   );
 };
