@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View, SafeAreaView} from 'react-native';
 
 import Header from './components/Header';
 import StartGameScreen from './screens/StartGameScreen';
@@ -49,12 +49,12 @@ const App = () => {
   }
 
   return (
-    <View style={styles.screen}>
+    <SafeAreaView style={styles.screen}>
       <Header title={'Guess a Number'} />
       {content}
       {/* <StartGameScreen />
         <GameScreen /> */}
-    </View>
+    </SafeAreaView>
   );
 };
 
