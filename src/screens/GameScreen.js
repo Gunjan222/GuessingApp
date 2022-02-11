@@ -7,11 +7,12 @@ import {
   FlatList,
   Alert,
   Dimensions,
+  Platform,
 } from 'react-native';
 import NumberContainer from '../components/NumberContainer';
 import Card from '../components/Card';
-import DefaultStyles from '../constant/default-styles';
-import MainButton from '../components/MainButton';
+import DefaultStyles from '../../constant/default-styles';
+import MainButton from '../src/components/MainButton';
 
 const generateRandomBetween = (min, max, exclude) => {
   min = Math.ceil(min);
@@ -107,7 +108,11 @@ const GameScreen = props => {
   if (availableDeviceHeight < 500) {
     return (
       <View style={styles.screen}>
-        <Text style={DefaultStyles.bodyText}>Opponent's Guess</Text>
+        {Platform.OS === 'ios' ? (
+          <Text>Opponent's Guess</Text>
+        ) : (
+          <Text style={DefaultStyles.bodyText}>Opponent's Guess</Text>
+        )}
 
         <View style={styles.controls}>
           <MainButton onPress={nextGuessHandler.bind(this, 'lower')}>
@@ -133,7 +138,11 @@ const GameScreen = props => {
 
   return (
     <View style={styles.screen}>
-      <Text style={DefaultStyles.bodyText}>Opponent's Guess</Text>
+      {Platform.OS === 'ios' ? (
+        <Text>Opponent's Guess</Text>
+      ) : (
+        <Text style={DefaultStyles.bodyText}>Opponent's Guess</Text>
+      )}
       <NumberContainer>{currentGuess}</NumberContainer>
 
       <Card style={styles.btnContainer}>

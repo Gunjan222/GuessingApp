@@ -9,10 +9,10 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View, SafeAreaView} from 'react-native';
 
-import Header from './components/Header';
-import StartGameScreen from './screens/StartGameScreen';
-import GameScreen from './screens/GameScreen';
-import GameOverScreen from './screens/GameOverScreen';
+import Header from './src/components/Header';
+import StartGameScreen from './src/screens/StartGameScreen';
+import GameScreen from './src/screens/GameScreen';
+import GameOverScreen from './src/screens/GameOverScreen';
 
 const App = () => {
   const [userNumber, setUserNumber] = React.useState();

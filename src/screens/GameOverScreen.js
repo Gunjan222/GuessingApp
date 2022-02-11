@@ -7,8 +7,8 @@ import {
   Dimensions,
   ScrollView,
 } from 'react-native';
-import colors from '../constant/colors';
-import MainButton from '../components/MainButton';
+import colors from '../../constant/colors';
+import MainButton from '../src/components/MainButton';
 // import img from '../assets/success.png';
 const GameOverScreen = props => {
   return (

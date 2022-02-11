@@ -14,9 +14,9 @@ import {
 
 import Card from '../components/Card';
 import Inputs from '../components/Inputs';
-import colors from '../constant/colors';
+import colors from '../../constant/colors';
 import NumberContainer from '../components/NumberContainer';
-import MainButton from '../components/MainButton';
+import MainButton from '../src/components/MainButton';
 // import {useEffect} from 'react/cjs/react.production.min';
 
 const StartGameScreen = props => {
